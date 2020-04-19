@@ -7,4 +7,3 @@ public class Variabless {
         System.out.println("myTotal\n");
         System.out.println(1000-myTotal);
     }
-}
