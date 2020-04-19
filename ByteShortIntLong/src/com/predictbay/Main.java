@@ -18,8 +18,8 @@ public class Main {
         //Readability
         int myMaxIntTest = 2_147_483_647;
 
-        Byte myMinByteValue = Byte.MIN_VALUE;
-        Byte myMaxByteValue = Byte.MAX_VALUE;
+        byte myMinByteValue = Byte.MIN_VALUE;
+        byte myMaxByteValue = Byte.MAX_VALUE;
         System.out.println("Byte Minimum Value = " + myMinByteValue);
         System.out.println("Byte Maximum Value = " + myMaxByteValue);
 
@@ -47,8 +47,13 @@ public class Main {
         */
         long bigLongLiteralValue1 = 2_147_483_647; // Integer by default
         long bigLongLiteralValue2 = 2_147_483_647_243L; // Longer than integer, hence error without the L
+        short bigShortLiteralValue = 32767; // 32768 will be rejected as it exceeds short max size
 
-        short bigShortLiteralValue = 32767; // 32768 will be rejected as it exceeds short max size  
+
+        // Type casting, INT is the default data type for expressions in JAVA, JVM hence every expression is converted into int
+        byte myNewByteValue = (byte) ( myMinByteValue / 2 );
+        short myNewShortValue = (short) ( myMinShortValue / 2 );
+        System.out.println( "Byte/2 = " + myNewByteValue + "\nShort/2 = " + myNewShortValue );
 
     }
 }
